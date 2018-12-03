@@ -1,4 +1,6 @@
 import { input } from './input';
+import { of, from } from 'rxjs';
+import { map, reduce, mergeMap, tap, scan, first, pairwise, take, repeat, filter } from 'rxjs/operators';
 
 const part1 = of(input).pipe(
     map(input => input.split('\n')),
@@ -9,3 +11,5 @@ const part1 = of(input).pipe(
     }, 0),
     first()
 );
+
+console.info('Day 1 results are:', part1);
